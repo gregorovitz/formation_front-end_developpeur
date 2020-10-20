@@ -1,0 +1,16 @@
+p{
+    font-size: 2em;
+    /*font-size:48px*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+}
+#p1{
+    float:left;
+    background-color: chartreuse;    
+}
+
+#p2{
+    float:right;
+    background-image: url("../chapitre3");
+}

@@ -1,0 +1,26 @@
+p{
+    color:lightgreen
+}
+/*un commentaire*/
+
+.jour{
+    font-style:italic
+}
+#lun{color:yellow}
+#mar{color:purple}
+#mer{color:greenyellow}
+#jeu{color:pink}
+#ven{color:rebeccapurple}
+#sam{color:orange}
+#dim{color:olivedrab}
+
+#gras{font-weight: bold;}
+
+p,h1{
+    color:red
+}
+/*modifie les p dans des div*/
+div p{
+    color:plum
+
+}

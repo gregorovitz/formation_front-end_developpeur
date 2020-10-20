@@ -1,0 +1,26 @@
+
+div{
+    background-color: white;
+    width: 50%;
+    
+    margin: auto;
+    width: 50%;
+    height: 100%; 
+    text-align: center; 
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('../../chapitre3/exercice/Images/IMG_7599.JPG');
+
+}
+h2{
+    color:paleturquoise;
+    background-color: peachpuff;
+    font-size:3em;
+}
+h2:hover{
+    color:powderblue;
+}
+ul{
+    text-align: left;
+}
