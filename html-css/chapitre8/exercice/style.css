@@ -1,0 +1,72 @@
+table{
+    
+    background-color: orangered;
+    width: 100%;
+    
+    
+   
+
+}
+div.inline{
+    width: 45%;
+    display: inline-block;
+}
+div{
+    
+    color: white;
+    text-align: center;
+    
+    
+}
+tr{
+    height:5em
+
+    
+}
+caption{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+td{
+    border: orangered;
+    border-width: 10px;
+    border-style: solid;
+}
+.vt{
+    vertical-align: top;
+}
+.vc{
+    vertical-align: center;
+}
+.vb{
+    vertical-align: bottom;
+}
+.jaune{
+    background-color: yellow;
+}
+.bleu{
+    background-color: blue;
+}
+.tr{
+    text-align:right;
+}
+.tl{
+    text-align: left;
+}
+.green{
+    background-color: green;
+}
+.vd{
+    background-color: darkgreen;
+}
+
+.large{
+    width: 100%;
+}
+.orange{
+    background-color: orangered;
+}
+.black{
+    padding: 5px;
+    background-color: black;
+}

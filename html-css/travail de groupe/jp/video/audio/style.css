@@ -1,0 +1,150 @@
+/* Import du style d'écriture */
+@font-face {
+    font-family: 'jp';
+    src: url('./font/JungleFever-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+    background-image: url(./img/dino.jpg);
+    margin: 0; /* Reset des marges par défaut */
+    padding: 0;
+}
+h1{
+    font-family: 'jp';
+    text-align: center;
+    font-size: 5rem;
+    background-color: black;
+    color: white;
+    vertical-align: center;
+    margin-top: 50px;
+}
+/* Centre la video sur la page*/
+.video{
+    margin: 0 auto;
+    width: 900px;
+}
+.vide{
+    height: 1800px;
+}
+img{
+    max-height: 450px;
+}
+.img_bot {
+    position : absolute;
+    top : 410px;
+    right : 0px;
+    z-index : 1;
+
+ 
+}
+.img_mid {
+    position: absolute;
+    top : 410px;
+    right : 100px;
+    z-index: 2;
+}
+.img_top {
+    position : absolute;
+    top : 510px;
+    right : 25px;
+    z-index : 3;
+}
+.img_bot_2 {
+    position : absolute;
+    top : 390px;
+    left : 100px;
+    z-index : 1;
+}
+.img_mid_2 {
+    position: absolute;
+    top : 600px;
+    left: 50px;
+    z-index: 2;
+}
+.img_top_2 {
+    position : absolute;
+    top : 510px;
+    left : 25px;
+    z-index : 2;
+}
+.lianes{
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    z-index: 5;
+    width: 900px;
+}
+
+/* Permet de changer les attributs CSS en fonction de la taille d'écran utilisée*/
+@media screen and (max-width: 450px) { /* ici 450px pour les plus grands smartphones */
+    h1{
+        font-size: 3rem;
+    }
+    .video{
+        width: 400px;
+        position: fixed;
+    }
+    video{
+        width: 400px;
+        height: 400px;
+        padding-left: 7px;
+    }
+    img{
+        max-height: 150px;
+    }
+    .lianes{
+        position: fixed;
+        top: 170px;
+        left: 5px;
+        z-index: 5;
+        width: 400px;
+    }
+    .img_bot {
+        position : absolute;
+        top : 1410px;
+        right : 0px;
+        z-index : 1;
+    }
+    .img_mid {
+        position: absolute;
+        top : 1410px;
+        right : 100px;
+        z-index: 2;
+    }
+    .img_top {
+        position : absolute;
+        top : 1510px;
+        right : 25px;
+        z-index : 3;
+    }
+    .img_bot_2 {
+        position : absolute;
+        top : 1390px;
+        left : 5px;
+        z-index : 1;
+    }
+    .img_mid_2 {
+        position: absolute;
+        top : 1500px;
+        left: 25px;
+        z-index: 3;
+        height: 120px;
+        rotate: 30deg;
+    }
+    .img_top_2 {
+        position : absolute;
+        top : 1510px;
+        left : 5px;
+        z-index : 2;
+    }
+  }
+
+
+
+
+
+
+
+

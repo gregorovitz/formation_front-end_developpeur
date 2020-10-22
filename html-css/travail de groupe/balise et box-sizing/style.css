@@ -1,0 +1,50 @@
+a[href^="mailto"]::before {
+    content: "📧 ";
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+details pre{
+    background-color: black;
+    color: white;
+    width:100%;
+    text-align: left;
+    overflow-wrap: ;
+}
+details{
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    width: 68%;
+    min-width: 235px;
+}
+
+aside{
+    width: 28%;
+    border: 3px solid black;
+    float: right;
+    text-align: justify;
+}
+
+summary{
+    border: none;
+}
+
+footer{
+    width: 100%;
+    background-color: royalblue;
+    color:white;
+}
+footer a{
+    color:lightcyan
+}
+footer a:visited{
+    color: lightcoral;
+}

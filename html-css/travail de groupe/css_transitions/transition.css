@@ -1,0 +1,136 @@
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+
+#container{
+    margin: 0 auto;
+    width: 700px;
+}
+
+.homer_div{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    width: 300px;
+}
+
+.homer{
+    height: 150px;
+    width: auto;
+}
+
+.ball_container{
+    width: 400px;
+    height: 40px;
+    margin: 20px;
+}
+
+.ball{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    transform-origin: left;
+    transition-property: transform;
+    transition-duration: 10s; 
+    transition-delay: 0.0s;
+}
+
+#b1{
+    transition-timing-function: linear; 
+}
+
+#b2{
+    transition-timing-function: ease;
+}
+
+#b3{
+    transition-timing-function: ease-in-out;
+}
+
+#b4{
+    transition-timing-function: ease-in;
+}
+
+#b5{
+    transition-timing-function: ease-out;
+}
+
+#b6{
+    transition-timing-function: cubic-bezier();
+}
+
+#b7{
+    transition-timing-function: steps(7);
+}
+
+
+#balls:hover .ball
+{
+    transform: translateX(380px)
+}
+
+img{
+    transition-property: all; /* all none margin color identifiant, height sliding*/
+    transition-duration: 2s; /* 2000ms , 7s, 8s => par ordre de propriété*/
+    transition-timing-function: ease; /* ease linear ease-in ease-out ease-in-out cubic-bezier(n,n,n,n) */
+    transition-delay: 0.5s;
+    transform-style: preserve-3d;
+}
+
+p{
+    white-space: pre;
+    background-color: lightblue;
+}
+
+#homer_div_1 img:hover{
+    transform: scale(1.5) rotate(360deg);
+    border-radius: 50%;
+    filter: grayscale(0.8);
+}
+
+#homer_div_2 img:hover{
+    transform: scale(2, 1);
+}
+
+#homer_div_3 img:hover{
+    transform: rotate(360deg);
+}
+
+#homer_div_4 img:hover{
+    transform: skew(90deg);
+}
+
+#homer_div_5 img:hover{
+    transform: translatey(50px); /* px vh em */
+}
+
+#homer_div_6 img:hover{
+    opacity: 0.2;
+}
+
+#homer_div_7 img:hover{
+    transform: scale3d(2, .5, 20);
+}
+
+#homer_div_8 img:hover{
+    filter: grayscale(1);
+}
+
+#homer_div_9 img:hover{
+    transform: rotatez(45deg);
+}
+
+#homer_div_10 img{
+    transform-origin: left;
+}
+#homer_div_10 img:hover{
+    transform: scale(1.5);
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélécteurs CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Les sélécteurs CSS</h1>
+
+    <div id="selectorPlus">
+        <h2>Le sélécteur "+"</h2>
+        <p>Exemple : "h3 + p"</p>
+        <p>Ce sélécteur va permettre de choisir le premier élément qui suit l'autre. Ici, les premiers "p" qui suivent des "h3" <br>
+        Dans l'exemple ci dessus, cela séléctionnera tous les éléments "p" placés directement après un h3. <br>Dans l'exemple ci-dessous, vous pouvez voir notre séléction en bleu</p>
+        <h3>Le h3 en question</h3>
+        <p>Paragraphe 1</p>
+        <p>Paragraphe 2</p>
+        <p>Paragraphe 3</p>
+    </div>
+
+    <div id="selectorVague">
+        <h2>Le sélécteur "~"</h2>
+        <p>Exemple : "h3 ~ p"</p>
+        <p>Séléctionne TOUS les éléments "p" qui sont précédés d'un h3. Ne doit pas être spécialement directement précédés.<br>Exemple concret, séléction en bleu :</p>
+        <h3>Un h3</h3>
+        <p>Paragraphe 1</p>
+        <p>Paragraphe 2</p>
+        <ul><li>Une liste</li></ul>
+        <p>Paragraphe 3</p>
+        <h3>Un autre h3</h3>
+        <p>Paragraphe 4</p>
+        <p>Paragraphe 5</p>
+    </div>
+
+    <div id="selectorChapeauEgal">
+        <h2>Le sélécteur d'attribut "^="</h2>
+        <p>Exemple : "a[href^="https"]"</p>
+        <p> Séléctionne tous les les éléments dont la valeur de l'attribut ciblé COMMENCE par *insérer une chaîne de caractères*</p>
+        <p>Dans l'exemple ci-dessous, séléction en bleu :</p>
+        <p><a href="http://exemple1">http://exemple1<a></p>
+        <p><a href="https://exemple2">https://exemple2</a></p>
+        <p><a href="http://exemple3">http://exemple3</a></p> 
+        <p><a href="https://exemple4">https://exemple4</a></p> 
+    </div>
+
+    <div id="selectorDollarEgal">
+        <h2>Le sélécteur d'attribut "$="</h2>
+        <p>Exemple : "a[href$="toto"]"</p>
+        <p> Séléctionne tous les les éléments dont la valeur de l'attribut ciblé FINIT par *insérer une chaîne de caractères*</p>
+        <p>Dans l'exemple ci-dessous, sélection en bleu :</p>
+        <p><a href="http://exemple1toto">http://exempletoto<a></p>
+        <p><a href="https://exemple2">https://exemple2</a></p>
+        <p><a href="http://exemple3toto">http://exemple3toto</a></p> 
+        <p><a href="https://exemple4">https://exemple4</a></p> 
+    </div>
+
+    <div id="selectorEtoileEgal">
+        <h2>Le sélécteur d'attribut "*="</h2>
+        <p>Exemple : "a[href*="monkey"]"</p>
+        <p>Sélectionne tous les les éléments dont la valeur de l'attribut ciblé CONTIENT *insérer une chaîne de caractères*</p>
+        <p>Dans l'exemple ci-dessous, sélection en bleu :</p>
+        <p><a href="http://exemple1toto">http://exemplemonkeytoto<a></p>
+        <p><a href="https://exemple2">https://exemple2</a></p>
+        <p><a href="http://exemple3toto">http://exemple3toto</a></p> 
+        <p><a href="https://exemple4">https://exemplemonkey4</a></p> 
+    </div>
+
+    <div id="selectorEmpty">
+        <h2>La pseudo-classe ":empty"</h2>
+        <p>Exemple : "div:empty"</p>
+        <p>Sélectionne les éléments de la selection n'ayant pas d'enfants ni de contenu.</p>
+        <p>Dans l'exemple ci-dessous, séléction en bleu :</p>
+        <div>Une "div" avec un enfant "p"
+            <p>Enfant de la "div"</p>
+        </div>
+        <p>Une div sans enfant ni contenu :</p>
+        <div></div>
+    </div>
+
+    <div id="selectorTarget">
+        <h2>La pseudo-classe ":target"</h2>
+        <p>Exemple : ":target"</p>
+        <p>":target" s'appliquera à l'élément étant ciblé par une ancre de type "a", s'enlèvera si une nouvelle ancre est sélectionnée</p>
+        <p>Dans l'exemple ci dessous, en bleu une fois clickée sur l'ancre : </p>
+        <p><a href="#target1">Première ancre</a></p>
+        <p><a href="#target2">Deuxième ancre</a></p>
+        <p id="target1">Cible de la première ancre</p>
+        <p id="target2">Cible de la deuxième ancre</p>
+    </div>
+
+    <div id="selectorNot">
+        <h2>La pseudo-classe ":not()"</h2>
+        <p>Exemple : "p:not(.testNot)"</p>
+        <p>":not()" permet d'exclure certains éléments d'une sélection, ceux-ci doivent être mis entre paranthèses et peuvent être décrite par une autre séléction CSS</p>
+        <p>Dans l'exemple ci dessous, n'est PAS en bleu :</p>
+        <div id="exempleNot">
+            <p class="testNot">Paragraphe muni de la classe ".testNot"</p>
+            <p>Paragraphe simple</p>
+        </div>
+    </div>
+
+    <div id="selectorLastChild">
+        <h2>La pseudo-classe ":last-child"</h2>
+        <p>Exemple : "div p:last-child"</p>
+        <p>Permet de séléctionner les éléments ciblé étant dernier enfant</p>
+        <p>En bleu dans l'exemple ci dessous :</p>
+        <div>
+            <p>Premier paragraphe enfant d'une div</p>
+            <p>Second paragraphe enfant d'une div</p>
+            <p>Troisième paragraphe enfant d'une div</p>
+            <p>Dernier enfant paragraphe d'une div</p>
+        </div>
+    </div>
+
+    <div id="selectorOnlyChild">
+        <h2>La pseudo-classe ":only-child"</h2>
+        <p>Exemple : "p:only-child"</p>
+        <p>Permet de sélectionner les élément de ce type étant enfant unique</p>
+        <p>En bleu ci dessous :</p>
+        <div>Une div :
+            <p>Un paragraphe ayant un frère</p>
+            <p>Le frère en question</p>
+        </div>
+        <div>Une autre div :
+            <p>Un paragraphe enfant unique</p>
+        </div>
+    </div>
+</body>
+</html>

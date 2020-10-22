@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="transition.css" type="text/css">
+</head>
+<body>
+    <div id="container">
+        <h4>Histoire</h4>
+        <ul>
+            <li>gif</li>
+            <li>flash</li>
+            <li>javascript</li>
+            <li>...</li>
+        </ul>
+
+        <h4>Transition</h4>
+        <p>animation simple : passe d'un état A à un état B</p>
+
+        <h4>Éléments nécessaires pour créer une transition</h4>
+        <ul>
+            <li>une propriété CSS à modifier</li>
+            <li>une valeur initiale pour la propriété</li>
+            <li>une valeur finale pour la propriété</li>
+            <li>une durée</li>
+            <li>une pseudoclasse pour déclencher la transition (hover/active/visited)</li>
+        </ul>
+
+        <h4>Paramètres</h4>
+        <h5>version longue</h5>
+        <p>
+            img{
+                transition-property: all; /* all none margin color identifiant, height sliding*/
+                transition-duration: 2s; /* 2000ms , 7s, 8s => par ordre de propriété*/
+                transition-timing-function: ease;
+                transition-delay: 0.5s;
+            }
+            
+            #homer_div_1 img:hover{
+                transform: scale(1.5) rotate(360deg);
+            }
+        </p>
+        <h5>version compacte</h5>
+        <p>
+            transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;
+        </p>
+
+        <p>
+            transition: width 2s ease, height 2s linear;
+        </p>
+
+        <h4>Modulation de la vitesse de déroulement</h4>
+        <div id="balls">
+            <h5>linear</h5>
+            <div id="bc1" class="ball_container">
+                <div id="b1" class="ball"></div>
+            </div>
+            <h5>ease (default)</h5>
+            <div id="bc2" class="ball_container">
+                <div id="b2" class="ball"></div>
+            </div>
+            <h5>cubic-bezier()</h5>
+            <div id="bc6" class="ball_container">
+                <div id="b6" class="ball"></div>
+            </div>
+            <h5>ease-in-out</h5>
+            <div id="bc3" class="ball_container">
+                <div id="b3" class="ball"></div>
+            </div>
+            <h5>ease-in</h5>
+            <div id="bc4" class="ball_container">
+                <div id="b4" class="ball"></div>
+            </div>
+            <h5>ease-out</h5>
+            <div id="bc5" class="ball_container">
+                <div id="b5" class="ball"></div>
+            </div>
+            <h5>steps(7)</h5>
+            <div id="bc7" class="ball_container">
+                <div id="b7" class="ball"></div>
+            </div>
+        </div>
+
+        <h4>Transitions</h4>
+        <div id="homer_div_2" class="homer_div">
+            <h4>transform: scale(2, 1);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_3" class="homer_div">
+            <h4>transform: rotate(360deg);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_4" class="homer_div">
+            <h4>transform: skew(90deg);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_5" class="homer_div">
+            <h4>transform: translatey(50px);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_6" class="homer_div">
+            <h4>opacity: 0.2;</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_7" class="homer_div">
+            <h4>transform: scale3d(2, .5, 20);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_8" class="homer_div">
+            <h4>filter: grayscale(0.8);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_9" class="homer_div">
+            <h4>transform: rotatex(45deg);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_10" class="homer_div">
+            <h4>transform-origin: left;<br>transform: rotate(360deg);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+        <div id="homer_div_1" class="homer_div">
+            <h4>transform: scale(1.5) rotate(360deg)</h4>
+            <h4>filter: grayscale(0.8);</h4>
+            <img class="homer" src="../chapitre3/images/homer.jpg" alt="">
+        </div>
+
+        <h4>Performance : </h4>
+        <p>étapes qui nous intéressent pour le rendu de nos animations</p>
+        <ul>
+            <li>Style : creation du DOM</li>
+            <li>layout : positionnemnt et taille</li>
+            <li>paint : couleur</li>
+            <li>composition : combinaison des éléments</li>
+        </ul>
+        <p>=> utilisez surtout transform et opacity qui interviennent lors de la dernière étape et nécessite moins de ressourses.</p>
+
+        <h4>Animations</h4>
+        <a href="https://codepen.io/miocene/pen/mjLPVp">Moustached nanny</a>
+        
+        
+        <p></p>
+    </div>
+    
+    
+
+</body>
+</html>

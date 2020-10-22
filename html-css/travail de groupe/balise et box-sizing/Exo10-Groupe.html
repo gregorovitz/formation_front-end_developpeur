@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" types="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id=haut-de-page>
+        <h1>Explication de quelques balises</h1>
+        <nav>
+            <ol>
+                <li class="crumb"><a href="#section">Section</a></li>
+                <li class="crumb"><a href="#article">Article</a></li>
+                <li class="crumb"><a href="#aside">Asides</a></li>
+                <li class="crumb"><a href="#boxsizing">Box-Sizing</a></li>
+                <li class="crumb"><a href="#nav">Nav</a></li>
+                <li class="crumb"><a href="#details">Details</a></li>
+                <li class="crumb"><a href="#footer">Footer</a></li>
+                <li class="crumb"><a href="#header">Header</a></li>
+                
+            </ol>
+            
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <article id=section>
+                <header>
+                    <h2>Les sections</h2>
+                    <a href="#haut-de-page">Haut-de-page</a>
+                </header>
+                <div>
+                        <p>La balise &lt;section&gt; sert à regrouper des contenus en fonction de leur thématique, c'est une section autonome. Elle englobe généralement
+                        une portion du contenu au centre de la page. En règle générale elles ont un en-tête mais pas toujours.</p>
+                    
+                        <p>Exemple: un menu de navigation doit être enveloppé dans un élément &lt;nav&gt;, en revanche une liste de résultats de recherche n'a 
+                        pas d'éléments spécifiques et pourrait être placé dans une &lt;section&gt;.</p>
+                </div> 
+                <div>
+                    <details>
+                        <summary>Exemple</summary>
+                        <div>
+                            <pre>
+&lt;section&gt;
+    &lt;h2&gt;Ma section de page&lt;/h2&gt;
+    &lt;p&gt;Bla bla bla bla&lt;/p&gt;
+&lt;/section&gt;
+                            </pre>
+
+                        </div>
+                       
+                    </details>
+                        
+                </div>
+                <div>
+                        <p>N'utilisez pas l'élément &lt;section&gt; comme conteneur générique; c'est à cela que sert &lt;div&gt;, en particulier lorsque la coupe est uniquement à des fins de style.</p>
+                </div>
+            </article>   
+            <article id=article >
+                <header>
+                    <h2>Les articles</h2>
+                    <a href="#haut-de-page">Haut-de-page</a>
+                 </header>
+                <div>
+                        <p>La balise &lt;article&gt; sert quant à elle à englober une partie d'une page qui pourrait être reprise sur un autre site (c'est le cas par exemple des actualités),
+                    un article doit donc avoir un sens en soi.</p>
+                </div>
+                <div>
+                    <details>
+                        <summary>Exemple</summary>
+                        <div>
+                            <pre>
+&lt;article&gt;
+    &lt;h1&gt;Mon article&lt;/h1&gt;
+    &lt;p&gt;Bla bla bla bla&lt;/p&gt;
+&lt;/article&gt;
+
+                            </pre>
+                            <img src="images/article.jpg" width="500px">
+                        </div>
+                       
+                    </details>
+                    
+                </div>
+               
+            </article>
+            <aside>
+                <header><h3>Exemple d'aside</h3></header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, omnis eos magni corporis in architecto alias quis
+                    ipsum consequatur, at officiis neque corrupti! Voluptatibus, dicta repellat natus non quasi ducimus deleniti quis
+                    reprehenderit eaque tempora dignissimos minima, nostrum beatae perspiciatis fuga. Dignissimos porro natus nesciunt
+                    voluptates ad a alias aut fugiat placeat, illum rem laboriosam optio vitae recusandae quasi neque ea beatae ab accusantium. Nemo eveniet praesentium modi provident dignissimos, adipisci obcaecati placeat quae autem.</p>
+            </aside>
+            <article id=aside>
+                <header>
+                    <h2>Les asides</h2>
+                    <a href="#haut-de-page">Haut-de-page</a>
+                </header>
+                <div>
+                    <p>La balise &lt;aside&gt; est conçue pour contenir des informations complémentaires au document que l'on visualise (Il peut y avoir plusieurs blocs &lt;aside&gt; dans la page).</p>
+                </div>
+                <div>
+                    <details>
+                        <summary>Exemple</summary>
+                        <div >
+                            <pre>
+&lt;asides&gt;</br>
+    &lt;p&gt;Bla bla bla bla&lt;/p&gt;</br>
+&lt;/asides&gt;</br>
+                            </pre>    
+                            <img src="images/asides.jpg" width="500px">
+                        </div>
+                    </details>
+                </div>
+                
+                <div>
+                    <p>Conseil: le contenu &lt;aside&gt; est souvent placé en tant que barre latérale dans un document.</p>
+                </div>
+            </article>  
+            <article id=boxsizing>
+                <header>
+                    <h2>box-sizing</h2>
+                    <a href="#haut-de-page">Haut-de-page</a>
+                </header>
+                <div>
+                    <p>La propriété CSS box-sizing définit la manière dont la largeur et la hauteur totales d'un élément sont calculées (par défaut c'est la hauteur et la largeur).</p>
+                </div>
+                <details>
+                    <summary>Exemple </summary>
+                    <div>
+                        <div >
+                            <pre>
+div { 
+    width: 160px;
+    height: 80px;
+    padding: 20px;
+    border: 8px solid red;
+    background: yellow;
+}
+
+.content-box { 
+    box-sizing: content-box; 
+    /* Largeur totale : 160px + (2 * 20px) + (2 * 8px) = 216px
+    Hauteur totale : 80px + (2 * 20px) + (2 * 8px) = 136px
+    Largeur de la boîte de contenu : 160px
+    Hauteur de la boîte de contenu : 80px */
+}
+
+.border-box { 
+    box-sizing: border-box;
+    /* Largeur totale : 160px
+    Hauteur totale : 80px
+    Largeur de la boîte de contenu : 160px - (2 * 20px) - (2 * 8px) = 104px
+    Hauteur de la boîte de contenu : 80px - (2 * 20px) - (2 * 8px) = 24px */
+}
+                            </pre>    
+                        
+                        </div>
+                        <div>
+                            <pre>
+&lt;div class="content-box"&gt;Content box&lt;/div&gt;<br>
+&lt;br&gt;<br>
+&lt;div class="border-box"&gt;Border box&lt;/div&gt;<br>
+                            </pre>   
+                    
+                        </div>
+                        <img src="images/boxsizing1.jpg">
+                    </div>
+                    </details>
+                </details>
+                
+                <div>
+                    <p>Content-box vous donne le comportement de dimensionnement par défaut. Si vous définissez la largeur d'un élément sur 100 pixels,
+                    la zone de contenu de l'élément aura une largeur de 100 pixels, et la largeur de toute bordure ou remplissage sera ajoutée à la largeur de rendu finale, ce qui rend l'élément plus large que 100 pixels</p>
+                
+                    <p>Border-box indique au navigateur de prendre en compte toute bordure et remplissage dans les valeurs que vous spécifiez pour la largeur et la hauteur d'un élément. Si vous définissez la largeur d'un élément sur 100 pixels,
+                    ces 100 pixels incluront toute bordure ou remplissage que vous avez ajouté, et la zone de contenu se rétrécira pour absorber cette largeur supplémentaire.</p>
+                </div>
+            </article>
+
+            <article id="details">
+                <header>
+                    <h2>details</h2>
+                    <a href="#haut-de-page">haut-de-page</a>
+                </header>
+                    <div>
+                        L'élément HTML &lt;details&gt; est utilisé comme un outil permettant de révéler une information.
+                        Un résumé ou un intitulé peuvent être fournis grâce à un élément &lt;summary&gt;
+                    </div>
+                    <details>
+                        <summary>Exemple</summary>
+                        <div>
+                            <pre>
+&lt;details&gt;<br>
+    &lt;summary&gt;Exemple&lt;/summary&gt;<br>
+&lt;/details&gt;<br>
+                            </pre>
+                        </div>
+                    </details>
+                </article>
+            <article id="nav">
+                <header>
+                    <h2>nav</h2>
+                    <a href="#haut-de-page">haut-de-page</a>
+                </header>
+                    <div>
+                        L'élément HTML &lt;nav&gt; représente une section d'une page ayant des liens vers 
+                        d'autres pages ou des fragments de cette page. Autrement dit, c'est une section 
+                        destinée à la navigation dans un document (avec des menus, des tables des matières,
+                        des index, etc.). Se retrouve parfois dans le header
+                    </div>
+                    <details>
+                        <summary>Exemple</summary>
+                        <div>
+                            <pre>
+&lt;nav class="menu"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#Accueil"&gt;Accueil &lt;/a&gt; &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#Apropos"&gt;À propos &lt;/a&gt; &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#Contact"&gt;Contact &lt;/a&gt; &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                            </pre>
+                        </div>
+                    </details>
+                </article>
+            <article id=header>
+                <header>
+                    <h2> header</h2>
+                    <a href="#haut-de-page">haut-de-page</a>
+                </header>
+                    <div>
+                        L'élément &lt;header&gt; n'est pas une section de contenu et n'introduit donc pas de
+                        nouvelle section dans ls structure. Cela dit, un élément &lt;header&gt; est généralement
+                        destiné à contenir l'en-tête de la section environnante (un élément h1-h6), 
+                        mais ce n'est pas obligatoire.
+                    </div>
+                    <details>
+                        <summary>Exemple</summary>
+                        <div>
+                            <pre>
+                                &lt;header&gt;
+                                    &lt;h1&gt; mon titre &lt;/h1&gt;
+                                &lt;/header&gt;
+                            </pre>
+                            <pre>
+&lt;header&gt;
+    &lt;h1&gt; mon titre &lt;/h1&gt;
+    &lt;nav class="menu"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#Accueil"&gt;Accueil &lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt;&lt;a href="#Apropos"&gt;À propos &lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt;&lt;a href="#Contact"&gt;Contact &lt;/a&gt; &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+                            </pre>
+
+                        </div>
+                    </details>   
+            </article>
+            <article id=footer>
+                <header>
+                    <h2>footer</h2>
+                    <a href="#haut-de-page">haut-de-page</a>
+                </header>
+                    <div>
+                        l'élément HTML &lt;footer&gt; représente le pied de page de la section ou de
+                        la racine de sectionnement la plus proche. Un pied de page ou de section 
+                        contient habituellement des informations sur l'auteur de la section, les données relatives au
+                        droit d'auteur (copyright) ou les liens vers d'autres documents en relation.
+                        L'élément HTML  &lt;address&gt;, se trouve souvent dans le footer, celui-ci indique des informations de contact pour une personne, un groupe de personnes ou une organisation.
+                    </div>
+                    <details>
+                        <summary>Exemple</summary>
+                        <div>
+                            <pre>
+&lt;footer&gt;
+    &lt;p&gt;© 2018 Gandalf&lt;/p&gt;
+&lt;/footer&gt;
+                            </pre>
+                            <pre>
+&lt;footer&gt;
+    &lt;p&gt;vous pouvez contacter les auteur à l'adresse :&lt;/p&gt;
+    &lt;address&gt;
+        &lt; p&gt;&lt;a href="mailto:mon_mail@gmail.be"&gt;mon_mail@gmail.be&lt;/a&gt;&lt;/p&gt;
+                ou
+        &lt;p&gt; &lt;a href="mailto:mon_mail@hotmail.be"&gt;doye.kevin@hotmail.be&lt;/a&gt;&lt;/p&gt; 
+    &lt;/address&gt;
+&lt;/footer&gt;
+                            </pre>
+
+                        </div>
+                    </details>   
+                </article>
+        </section>
+    </main>
+   
+    <footer>
+        <p>vous pouvez contacter les auteur à l'adresse :</p> 
+        <address>
+            
+            <p><a href="mailto:marquebreucq.emmanuel@edu.technobel.be">marquebreucq.emmanuel@edu.technobel.be</a></p>
+            ou
+            <p> <a href="mailto:doye.kevin@edu.technobel.be">doye.kevin@edu.technobel.be</a></p> 
+        </address>
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+#selectorPlus h3 + p{
+    color:#5a7da6;
+}
+
+#selectorVague h3 ~ p{
+    color:#5a7da6;
+}
+
+#selectorChapeauEgal a[href^="https"]{
+    color:#5a7da6;
+}
+
+#selectorDollarEgal a[href$="toto"]{
+    color:#5a7da6;
+}
+
+#selectorEtoileEgal a[href*="toto"]{
+    color:#5a7da6;
+}
+
+#selectorEmpty div:empty{
+    background-color:#5a7da6;
+    width:3rem;
+    height:3rem;
+}
+
+#selectorTarget p:target{
+    color:#5a7da6;
+}
+
+#exempleNot p:last-of-type:not(span){
+    color:#5a7da6;
+}
+
+#selectorLastChild div p:last-child{
+    color:#5a7da6;
+}
+
+#selectorOnlyChild div p:only-child{
+    color:#5a7da6;
+}
+
