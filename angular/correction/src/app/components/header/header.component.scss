@@ -1,0 +1,11 @@
+header {
+    height: 75px;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    i.fa {
+        cursor: pointer;
+        &:hover {
+            color: orange;
+        }
+    }
+}

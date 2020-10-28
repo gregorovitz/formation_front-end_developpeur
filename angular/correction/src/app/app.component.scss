@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    aside {
+        min-height: calc(100vh - 125px);
+        width: 300px;
+        border-right: 1px solid gray;
+    }
+    section {
+        background-color: #ddd;
+        flex: 1;
+        padding: 20px;
+    }
+}

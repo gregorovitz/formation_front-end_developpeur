@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        <h2>Exercice 1 - Timer</h2>
+    </div>
+    <div class="card-body">
+        <div>{{ compt }}</div>
+        <button
+        (click)="start()"
+        [disabled]="id != null"
+        class="btn btn-outline-success mr-3"
+        >Start</button>
+        <button 
+        class="btn btn-outline-danger mr-3" 
+        [disabled]="id == null"
+        (click)="stop()">Stop</button>
+        <button 
+        class="btn btn-outline-info"
+        [disabled]="compt == 0"
+        (click)="reset()">Reset</button>
+    </div>
+</div>

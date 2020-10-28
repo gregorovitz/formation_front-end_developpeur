@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+        <h2>Binding 1 way</h2>
+    </div>
+    <div class="card-body">
+        <h4>String: </h4>
+        <p>String (raw): {{ someString }}</p>
+        <p>String (lowercase): {{ someString | lowercase }}</p>
+        <p>String (uppercase): {{ someString | uppercase }}</p>
+        <p>String (titlecase): {{ someString | titlecase }}</p>
+
+        <h4>Number: </h4>
+        <p>Number (raw): {{ someNumber }}</p>
+        <!-- 'x.y-z'  -->
+        <!-- x: nombre minimal de chiffres pour les unités -->
+        <!-- y: nombre maximal de chiffres apres la virgule -->
+        <!-- z: nombre minimal de chiffres apres la virgule -->
+        <p>Number (format): {{ someNumber | number : '4.2-2' }}</p>
+        <p>Number (currency): {{ someNumber | currency }}</p>
+
+        <h4>Dates: </h4>
+        <p>Date (raw): {{ someDate }}</p>
+        <p>Date (format): {{ someDate | date : 'dd MMMM yyyy' }}</p>
+
+        <h4>Boolean: </h4>
+        <p>Boolean (raw): {{ someBoolean }}</p>
+        <p>Boolean (ternary): {{ someBoolean ? 'OK' : 'KO' }}</p>
+
+        <h4>Changing Value: </h4>
+        <p>Change value after 2 seconds: <span class="text-danger">{{ someVariable }}</span></p>
+    </div>
+</div>

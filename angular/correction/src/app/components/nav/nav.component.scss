@@ -1,0 +1,11 @@
+ul {
+    *, a {
+        color: gray;
+    }
+    padding: 0;
+    li.current-link {
+        *, a {
+            color: orange;
+        }
+    }
+}
