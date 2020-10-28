@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="card-header">
+        <h2>timer avec heure, les minute, secondes, milliseconde calculer dans une fonction affichage dans exo1.component .ts</h2>
+    </div>
+    <div class="card-body">
+        <p class="text-success">Timer: {{hours | number :'2.0-0'}}:{{mins | number :'2.0-0'}}:{{secs | number :'2.0-0'}}:{{milli | number:'3.0-0'}}</p><!--est plus lent-->
+        <p>Timer:{{nbmillisec}}</p>
+        
+        
+        <button (click)="start()" class="btn mr-3 btn-outline-success">start</button>
+        <button (click)="stop()"class="btn mr-3 btn-outline-danger">stop</button>
+        <button (click)="reset()"class="btn btn-outline-warning">reset</button>
+    </div>
+    <div class="card-footer">
+        
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h2>timer avec un pipe date:"HH : mm : ss : SSS  "</h2>
+    </div>
+    <div class="card-body">
+        <p class="text-danger">Timer: {{nbmillisec | date:"HH : mm : ss : SSS  "}}</p><!-- affiche 1 dans les heure au départ car les heure commence a 01-->
+    </div> 
+    <div class="card-footer bg-warning">
+        <p class=" font-weight-bolder">affiche 1 dans les heure au départ car les heure commence a 01</p>
+    </div>   
+</div>   
+<div class="card">
+    <div class="card-header">
+        <h2>timer avec des pipes number  "</h2>
+    </div>
+    <div class="card-body">
+        <p class="text-danger">Timer: {{(nbmillisec/36e5)| number :'2.0-0'}}:{{((nbmillisec % 36e5)/6e4) | number :'2.0-0'}}:{{((nbmillisec% 6e4)/1000) | number :'2.0-0'}}:{{nbmillisec%1000 | number:'3.0-0'}}</p> 
+        <!--attention decalage car |number aroundi le nombre donc apres 30s il inscrit 1:31:000 au lieu de 00:31:000 sec-->
+    </div> 
+    <div class="card-footer bg-warning">
+        <p class=" font-weight-bolder">attention le pipe number "| number :'2.0-0'" arrondi a l'entier le plus proche ce qui fausse le timer</p>
+    </div>   
+</div>   
+<div class="card">
+    <div class="card-header">
+        <h2>timer utilisant le time.pipe.ts   "</h2>
+    </div>
+    <div class="card-body">
+        <p class="text-success">Timer: {{nbmillisec | time}}</p><!-- affiche 1 dans les heure au départ-->
+    </div>  
+    <div class="card-footer">
+        
+    </div>  
+</div>  

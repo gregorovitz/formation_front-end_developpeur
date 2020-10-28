@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-header">Events</div>
+    <div class="card-body">
+        <p [ngClass]="{'text-danger': test(),'text-success' : compt==5}">compteur : {{compt}}</p>
+        <div>
+            <button 
+                (click)="decrease()"
+                [disabled]="compt==0"
+                class='btn btn-outline-danger mr-3'>Decrease</button>
+            <button 
+                (click)="increase()"
+                [disabled]="compt==9"
+                 class='btn btn-outline-success mr-3'>increase</button>
+        </div>
+    </div>
+</div>  
